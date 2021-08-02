@@ -139,6 +139,8 @@
 					$customer_id = $customer_id;
 					$query_order = "INSERT INTO hoadon(MaKH) VALUES($customer_id)";
 					$insert_order = $this->db->insert($query_order);
+					$sql ="UPDATE sanpham SET SoLuong=SoLuong-$quantity WHERE MaSanPham = '$productid'";
+					$insert_order = $this->db->update($sql);
 					$sql= "SELECT MaHD FROM hoadon WHERE MaKH=$customer_id ORDER By MaHD DESC LIMIT 1";
 					$rs=$this->db->select($sql)->fetch_assoc();
 					$MaHD=$rs['MaHD'];
@@ -148,15 +150,10 @@
 				}
 			}
 		}
-		public function getAmountPrice($customer_id)
-		{
-			$query = "SELECT price FROM tbl_order WHERE customer_id = '$customer_id' ";
-			$get_price = $this->db->select($query);
-			return $get_price;
-		}
+
 		public function get_cart_ordered($customer_id)
 		{
-			$query = "SELECT TenSanPham,NgayBan,ThanhTien,chitiethoadon.SoLuong FROM chitiethoadon INNER JOIN hoadon ON hoadon.MaHD=chitiethoadon.MaHD INNER JOIN sanpham ON chitiethoadon.MaSanPham = sanpham.MaSanPham WHERE MaKH = '$customer_id' ";
+			$query = "SELECT TenSanPham,NgayBan,ThanhTien,chitiethoadon.SoLuong FROM chitiethoadon INNER JOIN hoadon ON hoadon.MaHD=chitiethoadon.MaHD INNER JOIN sanpham ON chitiethoadon.MaSanPham = sanpham.MaSanPham WHERE MaKH = '$customer_id' ORDER BY chitiethoadon.MaHD DESC ";
 			$get_cart_ordered = $this->db->select($query);
 			return $get_cart_ordered;
 		}

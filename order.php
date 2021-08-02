@@ -7,7 +7,11 @@ $login_check = Session::get('customer_login');
 if ($login_check == false) {
     header('Location:login.php');
 }
-
+if (isset($_GET['success'] ) ) {
+        $message = 'Đặt hàng thành công. Chúng tôi sẽ liên hệ lại với bạn sớm. Chân thành cảm ơn!';
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    header('Location:order.php');
+}
 ?>
 <div class="view ">
     <div class="row">

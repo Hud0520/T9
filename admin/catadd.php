@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="row">
             <div class="col-md-12">
                 <div class="content">
-                    <div class="font-weight-bold border border-primary p-2">Dashboard</div>
+                    <div class="font-weight-bold border border-primary p-2">Thêm danh mục</div>
                     <div class="m-2">
                         
                         <form name="frmLogin" action="catadd.php" method="post">
