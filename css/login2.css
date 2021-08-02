@@ -1,0 +1,72 @@
+﻿/* Các xử lý định dạng cho login.html*/
+
+@import url('basic.css');
+@import url('all.css');
+.fw-7{
+	font-weight:700;
+}
+.loginview{ 			/* Độ rộng */
+	height: auto;  		/* Độ cao */
+	border: 0px solid #aaa;
+	background: #eee;
+	box-shadow: 5px 5px 10px #888;
+	border-radius: 5px;
+	height: auto;
+}
+
+.loginview .title{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: #555;
+	color: #fff;
+	font-weight: 700;
+	padding:10px;
+	text-transform: uppercase;
+}
+.mt-20{
+	margin-top: 20px;
+}
+#chkSave{
+	margin-top:5px;
+}
+.lg{
+	margin-bottom:10px;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.loginview label{
+		text-align: left !important;
+		font-weight: 600 !important;
+		padding-bottom: 10px;
+	}
+	.loginview input.type="checkbox"{
+		text-align: left !important;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+		.loginview label{
+		text-align: left !important;
+		font-weight: 600 !important;
+		padding-bottom: 10px;
+	}
+		.loginview input.type="checkbox"{
+		text-align: left !important;
+	}
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	
+}

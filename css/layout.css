@@ -1,0 +1,124 @@
+﻿/* Các xử lý định dạng cho login.html*/
+
+@import url('basic.css');
+@import url('all.css');
+
+/***************************************/
+.logo, .acc{
+	height:10vh;
+	
+}
+.acc h1{
+	font-size: 18px;
+}
+
+.acc a{
+	color : white;
+}
+.acc span{
+	font-size:30px;
+	
+}
+.h-50{
+	height: 200px !important;
+	width: 100%;
+}
+/***************************************/
+.img-sm{
+	background-color: coral;
+	height: 50px;
+	width: 75px;
+}
+.img{
+	background-color: coral;
+	height: 150px;
+	width: 100%;
+}
+.img-lg{
+	background-color: coral;
+	height: 50vh;
+	width: 75%;
+}
+.menu{
+	height:auto;
+}
+
+.card-body{
+	padding:5px 30px !important;
+}
+.view{
+	height:auto;
+}
+
+.view .content .tblview {
+	border-top: 1px solid #ddd;
+	border-left:1px solid #ddd;
+	font-size : 13px;
+}
+
+.view .content .tblview th,
+.view .content .tblview td{
+	border-right: 1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+
+.view .content .tblview th{
+	text-align: center;
+}
+.view .content .tblview .EVEN{
+	background: #efefef;
+}
+
+.view .content .tblview .NO, 
+.view .content .tblview .ED, 
+.view .content .tblview .ID {
+	text-align: center;
+	width: 2vw;
+}
+
+.view .content .tblview .NAME{
+	font-weight: bold;
+}
+.view .content .tblview .ADDRESS{
+	width: 30vw;
+}
+.view .content .tblview .DATE, .view .content .tblview .LOGINED{
+	text-align:center;
+}
+
+.card-body button:hover{
+	background: #00000010;
+	
+}
+
+/***************************************/
+.footer{
+	padding: 3vh 0;
+	text-align:center;
+}
+/***************************************/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	
+}
