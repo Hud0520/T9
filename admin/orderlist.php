@@ -19,7 +19,6 @@
                                 <th>Nhân viên</th>
                                 <th>Tổng </th>
                                 <th colspan="2">Thực hiện</th>
-                                <th>ID</th>
                             </tr>
                             <?php
 
@@ -44,7 +43,6 @@
                                     <td class="NAME"><?php echo $result['TenNhanVien']; ?></td>
                                     <td class="NO"><?php echo $result['Tong']; ?></td>
                                     <td colspan="2" class="ED"><a href="#">Xem chi tiết</a></td>
-                                    <td class="ID"><?php echo $result['MaHD']; ?></td>
                                     </tr>
                                 <?php
                                 }

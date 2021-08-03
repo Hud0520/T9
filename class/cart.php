@@ -159,7 +159,7 @@
 		}
 		public function get_ord_cart()
 		{
-			$query = "SELECT hoadon.MaHD,TenNhanVien,TenKH,NgayBan,SUM(ThanhTien) as Tong FROM chitiethoadon INNER JOIN hoadon ON hoadon.MaHD=chitiethoadon.MaHD INNER JOIN nhanvien ON hoadon.MaNhanVien= nhanvien.MaNhanVien INNER JOIN khachhang ON hoadon.MaKH = khachhang.MaKH";
+			$query = "SELECT hoadon.MaHD,TenNhanVien,TenKH,NgayBan,SUM(ThanhTien) as Tong FROM chitiethoadon INNER JOIN hoadon ON hoadon.MaHD=chitiethoadon.MaHD LEFT JOIN nhanvien ON hoadon.MaNhanVien= nhanvien.MaNhanVien INNER JOIN khachhang ON hoadon.MaKH = khachhang.MaKH";
 			$get_inbox_cart = $this->db->select($query);
 			return $get_inbox_cart;
 		}
