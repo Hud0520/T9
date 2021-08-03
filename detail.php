@@ -55,7 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" name="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Thêm vào giỏi hàng</button>&nbsp;&nbsp;&nbsp;
+                            <?php if ($rs['SoLuong'] <= 0) { ?>
+                            <div class="col-sm-6">
+                                <button type="submit" name="submit" class="btn btn-primary" disabled><i class="fas fa-shopping-cart"></i> Thêm vào giỏi hàng</button>&nbsp;&nbsp;&nbsp;
+                            </div><?php } else { ?>
+                            <div class="col-sm-6">
+                                <button type="submit" name="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Thêm vào giỏi hàng</button>&nbsp;&nbsp;&nbsp;
+                            </div>
+                        <?php } ?>
+                            
 
                             <button type="button" onclick="Location :javascript:history.back();" class="btn btn-primary">Trở lại <i class="fas fa-sign-out-alt"></i></button>
 
