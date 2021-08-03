@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
                 <form method="POST">
                     <div class="form-group row">
                         <label for="input" class="col-sm-4 col-form-label">Số lượng :</label>
-                        <?php if ($rs['SoLuong'] == 0) { ?>
+                        <?php if ($rs['SoLuong'] <= 0) { ?>
                             <div class="col-sm-6">
                                 <p class="bg-danger form-control text-white">Hết Hàng</p>
                             </div><?php } else { ?>
