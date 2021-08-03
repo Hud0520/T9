@@ -106,31 +106,6 @@
 			return $result;
 		}		
 		//Kết thúc Backend
-
-		public function getproduct_featheread()
-		{
-			$query = "SELECT * FROM tbl_product where type = '0' order by productId desc LIMIT 4 ";
-			$result = $this->db->select($query);
-			return $result;
-		}
-		public function getproduct_new()
-		{
-			$query = "SELECT * FROM tbl_product order by productId desc LIMIT 4 ";
-			$result = $this->db->select($query);
-			return $result;
-		}
-		public function get_details($id)
-		{
-			$query = 
-			"SELECT tbl_product.*, tbl_category.catName
-
-			 FROM tbl_product INNER JOIN tbl_category ON tbl_product.catId = tbl_category.catId
-							
-			 WHERE tbl_product.productId = '$id'
-			 ";
-
-			$result = $this->db->select($query);
-			return $result;
-		}
+		
 	}
  ?>
